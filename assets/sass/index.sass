@@ -1,0 +1,26 @@
+@import 'reset'
+@import 'variables'
+    
+*, *:before, *:after
+    font-family: 'Open Sans'
+.header
+    padding: 20px 35px
+    &__nav
+        display: flex
+        justify-content: end
+        align-items: baseline
+        gap: 37px
+        &__item
+            font-size: 15px
+        &__login
+            border-radius: 100px
+            color: $white
+            font-size: 18px
+            padding: 12px 30px
+            background-color: $light-pink
+
+.main
+    &__heading
+        min-height: 862px
+        background-image: url('../image/main_background.png')
+        background-size: cover
