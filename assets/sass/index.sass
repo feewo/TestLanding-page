@@ -4,23 +4,6 @@
 *, *:before, *:after
     font-family: 'Trebuchet MS', Helvetica, sans-serif
 
-h1
-    font-weight: 700
-    font-size: 58px
-    line-height: 70px
-h2
-    font-weight: 700
-    font-size: 42px
-    line-height: 52px
-h3
-    font-weight: 500
-    font-size: 22px
-    line-height: 32px
-p
-    font-size: 16px
-    font-weight: 400
-    line-height: 26px
-
 .header
     padding: 20px 35px
     background-color: $white
@@ -28,100 +11,159 @@ p
     top: 0
     width: 100%
     z-index: 1
-    &__nav
-        display: flex
-        justify-content: end
-        align-items: baseline
-        gap: 37px
-        &__item
-            font-size: 15px
-        &__login
-            border-radius: 100px
-            color: $white
-            font-size: 18px
-            padding: 12px 30px
-            background-color: $light-pink
+.nav
+    display: flex
+    justify-content: end
+    align-items: baseline
+    gap: 37px
+    &__item
+        font-size: 15px
+    &__login
+        border-radius: 100px
+        color: $white
+        font-size: 18px
+        padding: 12px 30px
+        background-color: $light-pink
 
-.main
-    &__heading
-        min-height: 952px
-        padding: 570px 355px 0 215px
-        color: $white
-        background-image: url('../image/main_background.jpg')
-        background-size: cover
-        box-shadow: inset 0 0 0 100vw rgba(47, 24, 147, 0.3)
-        &__description
-            max-width: 670px
-            font-size: 22px
-            line-height: 32px
-            padding-top: 24px
-    &__photogallery
-        max-width: 1400px
-        padding: 100px 115px
+.heading
+    min-height: 952px
+    padding: 570px 355px 0 215px
+    color: $white
+    background-image: url('../image/main_background.jpg')
+    background-size: cover
+    box-shadow: inset 0 0 0 100vw rgba(47, 24, 147, 0.3)
+    &__title
+        font-weight: 700
+        font-size: 58px
+        line-height: 70px
+    &__description
+        font-weight: 400
+        line-height: 32px
+        max-width: 670px
+        font-size: 22px
+        padding-top: 24px
+    
+.photogallery
+    max-width: 1400px
+    padding: 100px 115px
+    margin: 0 auto
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-template-rows: repeat(4, 210px)
+    grid-gap: 1.5rem
+    grid-gap: 30px
+    align-items: stretch
+    justify-items: stretch
+    grid-template-areas: "A B C" "A E C" "A E F" "D E F"
+    &__img
+        border-radius: 25px
+        max-width: 370px
+        object-fit: cover
+        &:nth-child(1)
+            grid-area: A
+        &:nth-child(2)
+            grid-area: B
+        &:nth-child(3)
+            grid-area: C
+        &:nth-child(4)
+            grid-area: D
+        &:nth-child(5)
+            grid-area: E
+        &:nth-child(6)
+            grid-area: F
+.visually
+    max-width: 937px
+    padding-top: 100px
+    padding-bottom: 143px
+    margin: 0 auto
+    color: $white
+    &__wrapper
+        background-color: #222228
+    &__main-el
+        max-width: 770px
         margin: 0 auto
-        display: grid
-        grid-template-columns: repeat(3, 1fr)
-        grid-template-rows: repeat(4, 210px)
-        grid-gap: 1.5rem
-        grid-gap: 30px
-        align-items: stretch
-        justify-items: stretch
-        grid-template-areas: "A B C" "A E C" "A E F" "D E F"
-        &__img
-            border-radius: 25px
-            max-width: 370px
-            object-fit: cover
-            &:nth-child(1)
-                grid-area: A
-            &:nth-child(2)
-                grid-area: B
-            &:nth-child(3)
-                grid-area: C
-            &:nth-child(4)
-                grid-area: D
-            &:nth-child(5)
-                grid-area: E
-            &:nth-child(6)
-                grid-area: F
-    &__visually
-        max-width: 937px
-        padding-top: 100px
-        padding-bottom: 143px
-        margin: 0 auto
-        color: $white
-        &__wrapper
-            background-color: #222228
+        padding-bottom: 90px
+        &__title
+            font-weight: 700
+            font-size: 42px
+            line-height: 52px
+            text-align: center
+            padding-bottom: 40px
+        &__video
+            width: 770px
+            height: 523px
+    &__other-el
+        display: flex
+        justify-content: row
+        gap: 55px
         &__el
-            max-width: 770px
-            margin: 0 auto
-            &__title
-                text-align: center
-                padding-bottom: 40px
-            &__video
-                padding-bottom: 90px
-                width: 770px
-                height: 523px
-        &__other
             display: flex
             justify-content: row
-            gap: 55px
+            gap: 30px
+            &__video
+                width: 170px
+                height: 110px
+            &__text
+                &__title
+                    font-weight: 700
+                    font-size: 14px
+                    line-height: 26px
+                    text-transform: uppercase
+                    padding-bottom: 11px
+                &__info
+                    font-size: 16px
+                    font-weight: 400
+                    line-height: 26px
+                    opacity: 70%
+                    
+.models-3D
+    display: flex
+    justify-content: space-between
+    &__content
+        padding-top: 117px
+        padding-left: 115px
+        &__heading
+            max-width: 570px
+            padding-bottom: 67px
+            &__title
+                font-weight: 700
+                font-size: 42px
+                line-height: 52px
+                padding-bottom: 32px
+                color: #1E0E62
+            &__description
+                max-width: 540px
+                font-weight: 500
+                font-size: 22px
+                line-height: 32px
+                padding-bottom: 46px
+                color: rgba(21, 20, 57, 0.4)
+            &__button-detail
+                padding: 12px 30px
+                background-color: $light-pink
+                border-radius: 100px
+                color: $white
+        &__technologies
+            display: flex
+            gap: 85px
+            max-width: 591px
             &__el
-                display: flex
-                justify-content: row
-                gap: 30px
-                &__video
-                    width: 170px
-                    height: 110px
-                &__text
-                    &__title
-                        font-weight: 700
-                        font-size: 14px
-                        line-height: 26px
-                        text-transform: uppercase
-                        padding-bottom: 11px
-                    &__info
-                        opacity: 70%
-
+                &__img
+                    max-width: 54px
+                    padding-bottom: 25px
+                &__title
+                    font-weight: 500
+                    font-size: 22px
+                    line-height: 32px
+                    padding-bottom: 24px
+                    color: #1E0E62
+                &__description
+                    font-weight: 400
+                    font-size: 16px
+                    line-height: 26px
+                    color: rgba(21, 20, 57, 0.4)
+    &__img
+        max-width: 485px
 
 
 
