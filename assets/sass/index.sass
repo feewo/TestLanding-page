@@ -168,35 +168,56 @@
 
 
 .tariff
-    &__toggle-switch
-        position: relative
-        display: inline-block
-        width: 50px
-        height: 24px
-        input
-            opacity: 0
-            width: 0
-            height: 0
-            &:checked + .tariff__toggle-switch__slider
-                background-color: #4caf50
-                &::before
-                    transform: translateX(26px)
-        &__slider
-            position: absolute
-            cursor: pointer
-            background-color: #ccc
-            border-radius: 24px
-            width: 100%
-            height: 100%
-            transition: background-color 0.3s
-            &::before
-                content: ""
+    color: $white-text
+    padding-top: 100px
+    padding-bottom: 150px
+    max-width: 770px
+    margin: 0 auto
+    &__wrapper
+        background-color: $gray-background
+    &__title
+        font-weight: 700
+        font-size: 42px
+        line-height: 52px
+        text-align: center
+        padding-bottom: 40px
+    &__variations
+        display: flex
+        gap: 24px
+        justify-content: center
+        padding-bottom: 60px
+        &__toggle-switch
+            position: relative
+            display: inline-block
+            width: 42px
+            height: 30px
+
+            &__input
+                opacity: 0
+                width: 0
+                height: 0
+                &:checked + .tariff__toggle-switch__slider
+                    background-color: #25DAC5
+                    &::before
+                        transform: translateX(12px)
+            &__slider
                 position: absolute
-                height: 20px
-                width: 20px
-                left: 4px
-                bottom: 2px
-                background-color: white
-                border-radius: 50%
-                transition: transform 0.3s
+                cursor: pointer
+                background-color: #ABABAB
+                border-radius: 22px
+                width: 100%
+                height: 100%
+                transition: background-color 0.3s
+                &::before
+                    content: ""
+                    position: absolute
+                    height: 24px
+                    width: 24px
+                    left: 3px
+                    bottom: 3px
+                    background-color: #FFFFFF
+                    border-radius: 22px
+                    transition: transform 0.3s
+   
+    &__service
     
