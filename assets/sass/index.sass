@@ -4,6 +4,15 @@
 *, *:before, *:after
     font-family: 'Trebuchet MS', Helvetica, sans-serif
 
+.page
+    position: relative
+    overflow: hidden
+    width: 100%
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    min-height: 100vh
+
 .header
     padding: 20px 35px
     background-color: $white-backgroud
@@ -25,7 +34,7 @@
         padding: 12px 30px
         background-color: $light-pink
 
-.heading
+.intro
     min-height: 952px
     padding: 570px 355px 0 215px
     color: $white-text
@@ -72,49 +81,51 @@
         &:nth-child(6)
             grid-area: F
 .visually
-    max-width: 937px
-    padding-top: 100px
-    padding-bottom: 143px
-    margin: 0 auto
-    color: $white-text
+    background-color: $gray-background
+    
     &__wrapper
-        background-color: $gray-background
-    &__main-el
+        max-width: 957px
+        padding-top: 100px
+        padding-bottom: 143px
+        margin: 0 auto
+        color: $white-text
+    &__main
         max-width: 770px
         margin: 0 auto
         padding-bottom: 90px
-        &__title
-            font-weight: 700
-            font-size: 42px
-            line-height: 52px
-            text-align: center
-            padding-bottom: 40px
-        &__video
-            width: 770px
-            height: 523px
-    &__other-el
+    &__title
+        font-weight: 700
+        font-size: 42px
+        line-height: 52px
+        text-align: center
+        padding-bottom: 40px
+    &__video--main
+        width: 770px
+        height: 523px
+    &__other
         display: flex
-        justify-content: row
+        justify-content: center
         gap: 55px
-        &__el
-            display: flex
-            justify-content: row
-            gap: 30px
-            &__video
-                width: 170px
-                height: 110px
-            &__text
-                &__title
-                    font-weight: 700
-                    font-size: 14px
-                    line-height: 26px
-                    text-transform: uppercase
-                    padding-bottom: 11px
-                &__info
-                    font-size: 16px
-                    font-weight: 400
-                    line-height: 26px
-                    opacity: 70%
+        flex-wrap: wrap
+    &__item
+        display: flex
+        gap: 30px
+        max-width: 451px
+    &__video--other
+        width: 170px
+        height: 110px
+    &__subtitle
+        font-weight: 700
+        font-size: 14px
+        line-height: 26px
+        text-transform: uppercase
+        letter-spacing: 2px
+        padding-bottom: 11px
+    &__info
+        font-size: 16px
+        font-weight: 400
+        line-height: 26px
+        opacity: 70%
                     
 .info
     display: flex
@@ -122,59 +133,62 @@
     &__content
         padding-top: 117px
         padding-left: 115px
-        &__heading
-            max-width: 570px
-            padding-bottom: 67px
-            &__title
-                font-weight: 700
-                font-size: 42px
-                line-height: 52px
-                padding-bottom: 32px
-                color: $purple-text
-            &__description
-                max-width: 540px
-                font-weight: 500
-                font-size: 22px
-                line-height: 32px
-                padding-bottom: 46px
-                color: $gray-text
-            &__button-detail
-                padding: 12px 30px
-                background-color: $light-pink
-                border-radius: 100px
-                color: $white-text
-        &__technologies
-            display: flex
-            gap: 85px
-            max-width: 591px
-            &__el
-                &__img
-                    max-width: 54px
-                    padding-bottom: 25px
-                &__title
-                    font-weight: 500
-                    font-size: 22px
-                    line-height: 32px
-                    padding-bottom: 24px
-                    color: $purple-text
-                &__description
-                    font-weight: 400
-                    font-size: 16px
-                    line-height: 26px
-                    color: $gray-text
+    &__intro
+        max-width: 570px
+        padding-bottom: 67px
+    &__title
+        font-weight: 700
+        font-size: 42px
+        line-height: 52px
+        padding-bottom: 32px
+        color: $purple-text
+    &__description
+        max-width: 540px
+        font-weight: 500
+        font-size: 22px
+        line-height: 32px
+        padding-bottom: 46px
+        color: $gray-text
+    &__button-detail
+        padding: 12px 30px
+        background-color: $light-pink
+        border-radius: 100px
+        color: $white-text
+    &__technologies
+        display: flex
+        gap: 85px
+        max-width: 591px
+        flex-wrap: wrap
+        padding-bottom: 89px
+    &__technology
+        max-width: 253px
+        &-img
+            max-width: 54px
+            padding-bottom: 25px
+        &-title
+            font-weight: 500
+            font-size: 22px
+            line-height: 32px
+            padding-bottom: 24px
+            color: $purple-text
+        &-description
+            font-weight: 400
+            font-size: 16px
+            line-height: 26px
+            color: $gray-text
     &__img
         max-width: 485px
 
 
 
 .tariff
-    color: $white-text
-    padding-top: 100px
-    padding-bottom: 150px
-    max-width: 770px
-    margin: 0 auto
+    background-color: $gray-background
     &__wrapper
-        background-color: $gray-background
+        color: $white-text
+        padding-top: 100px
+        padding-bottom: 150px
+        max-width: 1170px
+        margin: 0 auto
     &__title
         font-weight: 700
         font-size: 42px
@@ -186,38 +200,79 @@
         gap: 24px
         justify-content: center
         padding-bottom: 60px
-        &__toggle-switch
-            position: relative
-            display: inline-block
-            width: 42px
-            height: 30px
+    &__toggle
+        position: relative
+        display: inline-block
+        width: 42px
+        height: 30px
 
-            &__input
-                opacity: 0
-                width: 0
-                height: 0
-                &:checked + .tariff__toggle-switch__slider
-                    background-color: #25DAC5
-                    &::before
-                        transform: translateX(12px)
-            &__slider
-                position: absolute
-                cursor: pointer
-                background-color: #ABABAB
-                border-radius: 22px
-                width: 100%
-                height: 100%
-                transition: background-color 0.3s
+        &-input
+            opacity: 0
+            width: 0
+            height: 0
+            &:checked + .tariff__toggle-slider
+                background-color: #25DAC5
                 &::before
-                    content: ""
-                    position: absolute
-                    height: 24px
-                    width: 24px
-                    left: 3px
-                    bottom: 3px
-                    background-color: #FFFFFF
-                    border-radius: 22px
-                    transition: transform 0.3s
-   
+                    transform: translateX(12px)
+        &-slider
+            position: absolute
+            cursor: pointer
+            background-color: #ABABAB
+            border-radius: 22px
+            width: 100%
+            height: 100%
+            transition: background-color 0.3s
+            &::before
+                content: ""
+                position: absolute
+                height: 24px
+                width: 24px
+                left: 3px
+                bottom: 3px
+                background-color: #FFFFFF
+                border-radius: 22px
+                transition: transform 0.3s
+    &__services
+        display: flex
+        justify-content: center
+        gap: 30px
+        flex-wrap: wrap
     &__service
+        height: 576px
+        width: 370px
+        border-radius: 10px
+        overflow: hidden
+        display: flex
+        flex-direction: column
+        &__img
+            max-width: 370px
+        &__definition
+            flex: 1
+            background-color: $item-gray-background
+            padding: 45px 40px 40px 40px
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+
+        &__intro
+            display: flex
+            justify-content: space-between
+            font-weight: 500
+            font-size: 22px
+            line-height: 32px
+            padding-bottom: 16px
+        &__description
+            font-weight: 400
+            font-size: 16px
+            line-height: 26px
+        &__button
+            padding: 12px 55px
+            background-color: $light-pink
+            border-radius: 100px
+            font-weight: 500
+            font-size: 18px
+            line-height: 26px
+
+
+
     

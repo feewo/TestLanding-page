@@ -7,142 +7,173 @@
     <title>Тестовый лендинг</title>
 </head>
 <body>
-    <header class="header">
-        <nav class="nav">
-            <a href="#" class="nav__item">Изображения</a>
-            <a href="#" class="nav__item">Видео</a>
-            <a href="#" class="nav__item">3D модели</a>
-            <button class="nav__login" type="button">Войти</button>
-        </nav>
-    </header>
-
-    <main class="main">
-        <section class="heading">
-            <h1 class="heading__title">
-                Превратите свои идеи в реальные достижения
-            </h1>
-            <p class="heading__description">
-                Теперь у вас под рукой всегда есть нужные изображения, видео, музыка, 
-                3D-модели, редакционные материалы и авторские продукты. 
-            </p>
-        </section>
-
-        <section class="photogallery">
-            <img class="photogallery__img" src="assets/image/photogallery 6.jpg" alt="">
-            <img class="photogallery__img" src="assets/image/photogallery 5.jpg" alt="">
-            <img class="photogallery__img" src="assets/image/photogallery 2.jpg" alt="">
-            <img class="photogallery__img" src="assets/image/photogallery 4.jpg" alt="">
-            <img class="photogallery__img" src="assets/image/photogallery 3.jpg" alt="">
-            <img class="photogallery__img" src="assets/image/photogallery 1.jpg" alt="">
-        </section>
-
-        
-        <section class="visually__wrapper">
-            <div class="visually">
-                <div class="visually__main-el">
-                    <h2 class="visually__main-el__title">Поможем сделать ваш продукт уникальным</h2>
-                    <video class="visually__main-el__video" poster="assets\image\video_main.png" controls>
-                        <source src="#" type="video/webm">
-                        <source src="assets\videos\OIA cat x APT.mp4" type="video/mp4">
-                        Ваш браузер не поддерживает встроенные видео :(
-                    </video>
-                </div>
-                
-                <div class="visually__other-el">
-                    <div class="visually__other-el__el">
-                        <video class="visually__other-el__el__video" poster="assets\image\video_1.png" controls>
+    <div class="page">
+        <header class="header">
+            <nav class="nav">
+                <a href="#" class="nav__item">Изображения</a>
+                <a href="#" class="nav__item">Видео</a>
+                <a href="#" class="nav__item">3D модели</a>
+                <button class="nav__login" type="button">Войти</button>
+            </nav>
+        </header>
+    
+        <main class="main">
+            <section class="intro">
+                <h1 class="intro__title">
+                    Превратите свои идеи в реальные достижения
+                </h1>
+                <p class="intro__description">
+                    Теперь у вас под рукой всегда есть нужные изображения, видео, музыка, 
+                    3D-модели, редакционные материалы и авторские продукты. 
+                </p>
+            </section>
+    
+            <section class="photogallery">
+                <img class="photogallery__img" src="assets/image/photogallery 6.jpg" alt="">
+                <img class="photogallery__img" src="assets/image/photogallery 5.jpg" alt="">
+                <img class="photogallery__img" src="assets/image/photogallery 2.jpg" alt="">
+                <img class="photogallery__img" src="assets/image/photogallery 4.jpg" alt="">
+                <img class="photogallery__img" src="assets/image/photogallery 3.jpg" alt="">
+                <img class="photogallery__img" src="assets/image/photogallery 1.jpg" alt="">
+            </section>
+    
+            
+            <section class="visually">
+                <div class="visually__wrapper">
+                    <div class="visually__main">
+                        <h2 class="visually__title">Поможем сделать ваш продукт уникальным</h2>
+                        <video class="visually__video visually__video--main" poster="assets\image\video_main.png" controls>
                             <source src="#" type="video/webm">
                             <source src="assets\videos\OIA cat x APT.mp4" type="video/mp4">
                             Ваш браузер не поддерживает встроенные видео :(
                         </video>
-                        <div class="visually__other-el__el__text">
-                            <h3 class="visually__other-el__el__text__title">Эксклюзив</h3>
-                            <p class="visually__other-el__el__text__info">Используйте уникальный контент в своих целях</p>
-                        </div>
                     </div>
-                    <div class="visually__other-el__el">
-                        <video class="visually__other-el__el__video" poster="assets\image\video_2.png" controls>
-                            <source src="#" type="video/webm">
-                            <source src="assets\videos\OIA cat x APT.mp4" type="video/mp4">
-                            Ваш браузер не поддерживает встроенные видео :(
-                        </video>
-                        <div class="visually__other-el__el__text">
-                            <h3 class="visually__other-el__el__text__title">Высокое качество</h3>
-                            <p class="visually__other-el__el__text__info">Изображения и видео в высочайшем качестве</p>
-                        </div>
+                    
+                    <div class="visually__other">
+                        <article class="visually__item">
+                            <video class="visually__video visually__video--other" poster="assets\image\video_1.png" controls>
+                                <source src="#" type="video/webm">
+                                <source src="assets\videos\OIA cat x APT.mp4" type="video/mp4">
+                                Ваш браузер не поддерживает встроенные видео :(
+                            </video>
+                            <div class="visually__text">
+                                <h3 class="visually__subtitle">Эксклюзив</h3>
+                                <p class="visually__info">Используйте уникальный контент в своих целях</p>
+                            </div>
+                        </article>
+                        <article class="visually__item">
+                            <video class="visually__video visually__video--other" poster="assets\image\video_2.png" controls>
+                                <source src="#" type="video/webm">
+                                <source src="assets\videos\OIA cat x APT.mp4" type="video/mp4">
+                                Ваш браузер не поддерживает встроенные видео :(
+                            </video>
+                            <div class="visually__text">
+                                <h3 class="visually__subtitle">Высокое качество</h3>
+                                <p class="visually__info">Изображения и видео в высочайшем качестве</p>
+                            </div>
+                        </article>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <section class="info">
-            <div class="info__content">
-                <div class="info__content__heading">
-                    <h2 class="info__content__heading__title">
-                        Создавайте свои сайты в пару кликов
-                    </h2>
-                    <p class="info__content__heading__description">
-                        Мы создали новый продукт, который поможет дизайнерам, 
-                        разработчикам и небольшим стартапам создать свой сайт 
-                        быстро и просто.
-                    </p>
-                    <button class="info__content__heading__button-detail" type="button">Подробнее</button>
-                </div>
-                <div class="info__content__technologies">
-                    <article class="info__content__technologies__el">
-                        <img class="info__content__technologies__el__img" src="assets/image/Bootstrap4.png" alt="Bootstrap 4">
-                        <h3 class="info__content__technologies__el__title">Bootstrap 4</h3>
-                        <p class="info__content__technologies__el__description">
-                            HTML верстка основана на одном из самых 
-                            распространенных и надежных фреймворков
+            </section>
+    
+            <section class="info">
+                <div class="info__content">
+                    <div class="info__intro">
+                        <h2 class="info__title">
+                            Создавайте свои сайты в пару кликов
+                        </h2>
+                        <p class="info__description">
+                            Мы создали новый продукт, который поможет дизайнерам, 
+                            разработчикам и небольшим стартапам создать свой сайт 
+                            быстро и просто.
                         </p>
-                    </article>
-                    <article class="info__content__technologies__el">
-                        <img class="info__content__technologies__el__img" src="assets/image/HTML5_CSS3.png" alt="HTML5 & CSS3">
-                        <h3 class="info__content__technologies__el__title">HTML5 & CSS3</h3>
-                        <p class="info__content__technologies__el__description">
-                            Для достижения наилучшего результата мы 
-                            использовали только проверенные временем 
-                            технологии.
-                        </p>
-                    </article>
-                </div>
-            </div>
-            <img class="info__img" src="assets/image/3D_models.png" alt="Зеленый красивый дом с этажами, на которых растут цветы">
-        </section>
-
-        <section class="tariff__wrapper">
-            <div class="tariff">
-                <h2 class="tariff__title">У нас есть два тарифы</h2>
-                <div class="tariff__variations">
-                    <span>Месяц</span>
-                    <label class="tariff__variations__toggle-switch">
-                        <input class="tariff__variations__toggle-switch__input" type="checkbox">
-                        <span class="tariff__variations__toggle-switch__slider"></span>
-                    </label>
-                    <span>Год</span>
-                </div>
-                
-                
-
-                <article class="tariff__service">
-                    <img class="tariff__service__img" src="assets/image/tariff 1.jpg" alt="Первый тариф">
-                    <div class="tariff__service__definition">
-                        <h3 class="tariff__service__definition__title">
-                            Оптимальный
-                        </h3>
-                        <p class="tariff__service__definition__description">
-                            Редактируйте фото и видео в режиме онлайн. 
-                            Создавайте одностраничные сайты  из готовых 
-                            компонентов
-                        </p>
-                        <button class="tariff__service__definition__input" type="button">
-                            Начать бесплатно
-                        </button>
+                        <button class="info__button-detail" type="button">Подробнее</button>
                     </div>
-                </article>
-            </div>
-        </section>
-    </main>
+                    <div class="info__technologies">
+                        <article class="info__technology">
+                            <img class="info__technology-img" src="assets/image/Bootstrap4.png" alt="Bootstrap 4">
+                            <h3 class="info__technology-title">Bootstrap 4</h3>
+                            <p class="info__technology-description">
+                                HTML верстка основана на одном из самых 
+                                распространенных и надежных фреймворков
+                            </p>
+                        </article>
+                        <article class="info__technology">
+                            <img class="info__technology-img" src="assets/image/HTML5_CSS3.png" alt="HTML5 & CSS3">
+                            <h3 class="info__technology-title">HTML5 & CSS3</h3>
+                            <p class="info__technology-description">
+                                Для достижения наилучшего результата мы 
+                                использовали только проверенные временем 
+                                технологии.
+                            </p>
+                        </article>
+                    </div>
+                </div>
+                <img class="info__img" src="assets/image/3D_models.png" alt="Зеленый красивый дом с этажами, на которых растут цветы">
+            </section>
+    
+            <section class="tariff">
+                <div class="tariff__wrapper">
+                    <h2 class="tariff__title">У нас есть два тарифы</h2>
+                    <div class="tariff__variations">
+                        <span class="tariff__period">Месяц</span>
+                        <label class="tariff__toggle">
+                            <input class="tariff__toggle-input" type="checkbox">
+                            <span class="tariff__toggle-slider"></span>
+                        </label>
+                        <span class="tariff__period">Год</span>
+                    </div>
+                    
+                    
+                    <div class="tariff__services">
+                        <article class="tariff__service">
+                            <img class="tariff__service__img" src="assets/image/tariff 1.jpg" alt="Первый тариф">
+                            <div class="tariff__service__definition">
+                                <div class="tariff__service__info">
+                                    <div class="tariff__service__intro">
+                                        <h3 class="tariff__service__title">
+                                            Оптимальный
+                                        </h3>
+                                        <p class="tariff__service__price">500₽</p>
+                                    </div>
+                                    <p class="tariff__service__description">
+                                        Редактируйте фото и видео в режиме онлайн. 
+                                        Создавайте одностраничные сайты  из готовых 
+                                        компонентов
+                                    </p>
+                                </div>
+                                <button class="tariff__service__button" type="button">
+                                    Начать бесплатно
+                                </button>
+                            </div>
+                        </article>
+                        <article class="tariff__service">
+                            <img class="tariff__service__img" src="assets/image/tariff 1.jpg" alt="Первый тариф">
+                            <div class="tariff__service__definition">
+                                <div class="tariff__service__info">
+                                    <div class="tariff__service__intro">
+                                        <h3 class="tariff__service__title">
+                                            Профи
+                                        </h3>
+                                        <p class="tariff__service__price">1000₽</p>
+                                    </div>
+                                    <p class="tariff__service__description">
+                                        Редактируйте фото и видео в режиме онлайн. Создавайте 
+                                        одностраничные и многостраничные сайты  из готовых 
+                                        компонентов
+                                    </p>
+                                </div>
+                                <button class="tariff__service__button" type="button">
+                                    Начать бесплатно
+                                </button>
+                            </div>
+                        </article>
+                    </div>
+                        
+                </div>
+            </section>
+        </main>
+    </div>
+    
 </body>
 </html>
