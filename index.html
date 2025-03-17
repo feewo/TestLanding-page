@@ -19,13 +19,16 @@
     
         <main class="main">
             <section class="intro">
-                <h1 class="intro__title">
-                    Превратите свои идеи в реальные достижения
-                </h1>
-                <p class="intro__description">
-                    Теперь у вас под рукой всегда есть нужные изображения, видео, музыка, 
-                    3D-модели, редакционные материалы и авторские продукты. 
-                </p>
+                <div class="intro__wrapper">
+                    <h1 class="intro__title">
+                        Превратите свои идеи в реальные достижения
+                    </h1>
+                    <p class="intro__description">
+                        Теперь у вас под рукой всегда есть нужные изображения, видео, музыка, 
+                        3D-модели, редакционные материалы и авторские продукты. 
+                    </p>
+                </div>
+                
             </section>
     
             <section class="photogallery">
@@ -114,7 +117,7 @@
     
             <section class="tariff">
                 <div class="tariff__wrapper">
-                    <h2 class="tariff__title">У нас есть два тарифы</h2>
+                    <h2 class="tariff__title">У нас есть два тарифа</h2>
                     <div class="tariff__variations">
                         <span class="tariff__period">Месяц</span>
                         <label class="tariff__toggle">
@@ -142,13 +145,13 @@
                                         компонентов
                                     </p>
                                 </div>
-                                <button class="tariff__service__button" type="button">
+                                <button class="tariff__service__button tariff__service__button-recomend" type="button">
                                     Начать бесплатно
                                 </button>
                             </div>
                         </article>
                         <article class="tariff__service">
-                            <img class="tariff__service__img" src="assets/image/tariff 1.jpg" alt="Первый тариф">
+                            <img class="tariff__service__img" src="assets/image/tariff 2.jpg" alt="Первый тариф">
                             <div class="tariff__service__definition">
                                 <div class="tariff__service__info">
                                     <div class="tariff__service__intro">
@@ -174,6 +177,32 @@
             </section>
         </main>
     </div>
+
+    <div class="modal-login__overlay">
+        <div class="modal-login">
+            <h2 class="modal-login__title">Оставить заявку</h2>
+            <p class="modal-login__info">
+                Менеджеры перезвонят или напишут в течение дня. 
+                Поможем определиться и протестировать продукт. 
+                Без спама и навязчивости
+            </p>
+            <form class="modal-login__form" action="#" method="post">
+                <div class="modal-login__form-control">
+                    <input class="modal-login__form-control__input" type="email" id="email" required>
+                    <label class="modal-login__form-control__label" for="email">Email</label>
+                </div>
+                <div class="modal-login__form-control">
+                    <input class="modal-login__form-control__input" type="text" id="name" required>
+                    <label class="modal-login__form-control__label" for="name">Иван Иванов</label>
+                </div>
+                <div class="modal-login__form-control">
+                    <input class="modal-login__form-control__input" type="tel" id="phone" required>
+                    <label class="modal-login__form-control__label" for="phone">Телефон</label>
+                </div>
+            </form>
+        </div>
+    </div>
     
+    <script src="assets/scripts/script.js"></script>
 </body>
 </html>
