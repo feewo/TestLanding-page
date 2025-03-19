@@ -74,3 +74,12 @@ modalLoginForm.addEventListener('submit', (e) => {
         classModalThanksShow
     )
 })
+
+const burger = document.querySelector('.nav__burger');
+const nav = document.querySelector('.nav');
+burger.addEventListener('click', function() {
+    const burgerImage = burger.firstElementChild;
+    burgerImage.classList.toggle('nav__burger-active');
+    nav.classList.toggle('nav__open');
+    
+})

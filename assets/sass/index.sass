@@ -38,8 +38,64 @@
             background-color: $dark-pink
             transition: all 0.3s
 
+    &__burger 
+        border: 0
+        background-color: transparent
+        cursor: pointer
+        height: auto
+        display: none
+        padding: 10px 0
+        margin-left: auto
+        &-active
+            &.nav__burger__image 
+                background: none
+                &:before 
+                    transform-origin: left top
+                    transform: rotate(47deg) translateX(-1px)
+                    background-color: black
+
+                &:after
+                    transform-origin: left bottom
+                    transform: rotate(-45deg) translateX(-1px)
+                    background-color: black
+        &:focus 
+            outline: none
+        &__image 
+            width: 25px
+            height: 2px
+            background-color: #252525
+            position: relative
+            border-radius: 50px
+
+            &:after,
+            &:before 
+                width: 100%
+                height: 2px
+                position: absolute
+                content: ""
+                display: block
+                background-color: #252525
+                transition: transform .2s linear
+            &:after
+                bottom: -8px
+            &:before 
+                top: -8px
+    &__open
+        display: flex !important
+        align-items: center
+        flex-direction: column
+        gap: 37px
+        transition: transform .2s linear
+    @media (max-width: 498px)
+        display: none
+        
+        &__burger
+            display: block
+
+
+
 .intro
-    min-height: 952px
+    max-height: 952px
     padding: 570px 0px 122px 215px
     color: $white-text
     background-image: url('../image/main_background.jpg')
@@ -61,6 +117,16 @@
         padding-top: 24px
     @media (max-width: 1024px)
         padding-left: 100px
+    @media (max-width: 849px)
+        padding-left: 20px
+        padding-right: 20px
+        padding-top: 150px
+        padding-bottom: 40px
+        &__wrapper
+            margin: 0 auto
+        &__title
+            font-size: 40px
+            line-height: 50px
     
 .photogallery
     max-width: 1400px
@@ -90,6 +156,16 @@
             grid-area: E
         &:nth-child(6)
             grid-area: F
+    @media (max-width: 1024px)
+        padding-left: 20px
+        padding-right: 20px
+        grid-template-rows: repeat(4, 150px)
+    @media (max-width: 768px)
+        grid-template-rows: repeat(4, 100px)
+    @media (max-width: 540px)
+        grid-template-areas: "A F" "A F" "A B" "D E" "C E" "C E"
+    @media (max-width: 375px)
+        grid-template-areas: "A" "B" "C" "D" "E" "F"
 
 .visually
     background-color: $gray-background
@@ -109,9 +185,13 @@
         line-height: 52px
         text-align: center
         padding-bottom: 40px
-    &__video--main
-        width: 770px
-        height: 523px
+    &__video
+        &--main
+            width: 100%
+            height: 523px
+        &--other
+            width: 170px
+            height: 110px
     &__other
         display: flex
         justify-content: center
@@ -121,9 +201,6 @@
         display: flex
         gap: 30px
         max-width: 451px
-    &__video--other
-        width: 170px
-        height: 110px
     &__subtitle
         font-weight: 700
         font-size: 14px
@@ -136,11 +213,39 @@
         font-weight: 400
         line-height: 26px
         opacity: 70%
+    @media (max-width: 990px)
+        &__wrapper
+            padding-bottom: 50px
+            padding-top: 20px
+        &__title
+            padding-bottom: 0px
+            font-size: 30px
+            line-height: 40px
+        &__main
+            padding-bottom: 40px
+        &__item
+            max-width: 100%
+        &__video
+            &--main
+                height: 100%
+    @media (max-width: 768px)
+        &__video
+            &--main
+                height: 100%
+    @media (max-width: 460px)
+        &__other
+            height: 100%
+            padding-left: 10px
+            padding-right: 10px
+    @media (max-width: 580px) 
+        &__item
+            display: flex
+            flex-direction: column
 
 .info
     display: flex
-    justify-content: center
-    gap: 200px
+    justify-content: space-between
+    gap: 20px
     &__content
         padding-top: 117px
         padding-left: 115px
@@ -177,14 +282,15 @@
         padding-bottom: 89px
     &__technology
         max-width: 253px
+        display: flex
+        flex-direction: column
+        gap: 25px
         &-img
             max-width: 54px
-            padding-bottom: 25px
         &-title
             font-weight: 500
             font-size: 22px
             line-height: 32px
-            padding-bottom: 24px
             color: $purple-text
         &-description
             font-weight: 400
@@ -194,6 +300,36 @@
     &__img
         max-width: 485px
         object-fit: cover
+    @media (max-width: 1210px)
+        &__content
+            padding-left: 50px
+        &__technology
+            max-width: 200px
+    @media (max-width: 1039px)
+        &__img
+            max-width: 350px
+    @media (max-width: 904px)
+        &__img
+            max-width: 150px
+    @media (max-width: 768px)
+        &__intro
+            padding-bottom: 40px
+        &__content
+            padding-left: 20px
+            padding-right: 20px
+            padding-top: 40px
+        &__title
+            font-size: 30px
+            line-height: 40px
+        &__img
+            display: none
+        &__technologies
+            gap: 30px
+            padding-bottom: 40px
+        &__technology
+            max-width: 100%
+            
+
 
 
 
@@ -303,6 +439,21 @@
                     background-color: $dark-pink
                     transition: all 0.3s
                     color: $white-text
+    @media (max-width: 768px)
+        &__wrapper
+            padding-top: 20px
+            padding-bottom: 20px
+        &__title
+            font-size: 30px
+            line-height: 40px
+            padding-bottom: 20px
+        &__variations
+            padding-bottom: 20px
+        &__service
+            height: auto
+            &__definition
+                padding: 15px 10px 10px 10px
+                gap: 40px
 
 
 
@@ -398,3 +549,4 @@
         &__info
             font-size: 16px
             padding-bottom: 56px
+    
