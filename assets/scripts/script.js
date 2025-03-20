@@ -1,3 +1,7 @@
+// ---------------
+// Логика модального окна
+// ---------------
+
 // Имена классов для элементов
 const classButtonLogin = 'nav__login';
 const classModalLogin = 'modal-login';
@@ -75,6 +79,10 @@ modalLoginForm.addEventListener('submit', (e) => {
     )
 })
 
+// ---------------
+// Логика меню бургера
+// ---------------
+
 const burger = document.querySelector('.nav__burger');
 const nav = document.querySelector('.nav');
 burger.addEventListener('click', function() {
@@ -83,3 +91,32 @@ burger.addEventListener('click', function() {
     nav.classList.toggle('nav__open');
     
 })
+
+// ---------------
+// Меняем видеоплеер
+// ---------------
+
+// const video = document.querySelector('.visually__video');
+// const buttonStart = document.querySelector('.visually__video__start');
+
+
+// video.controls = false;
+
+// start
+// const handleButtonStart = () => {
+//     buttonStart.removeEventListener('click', handleButtonStart);
+//     buttonStart.classList.add('hidden');
+//     toggleMuted();
+// }
+// console.log(buttonStart);
+// const toggleMuted = () => {
+//     video.muted = !video.muted;
+// }
+
+// if (video.muted && video.autoplay && buttonStart) {
+//     buttonStart.classList.remove('hidden');
+//     buttonStart.addEventListener('click', handleButtonStart);
+//     toggleButtonPlayPause();
+//     buttonSound.classList.add('custom-video__sound-button--muted');
+// }
+
