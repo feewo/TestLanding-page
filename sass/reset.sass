@@ -1,0 +1,57 @@
+*
+  padding: 0px
+  margin: 0px
+  border: none
+  box-sizing: border-box
+  &::before, &::after
+    box-sizing: border-box
+
+a
+  color: #000000
+  text-decoration: none
+  background-color: transparent
+  cursor: pointer
+  &:link, &:visited, &:hover
+    color: #000000
+    text-decoration: none
+
+nav, header, section, main
+  display: block
+
+h1, h2, h3, p
+  font-size: inherit
+  font-weight: inherit
+
+img
+  vertical-align: top
+  max-width: 100%
+  height: auto
+
+input, button
+  font-family: inherit
+  font-size: inherit
+  color: inherit
+  background-color: transparent
+
+button
+  display: inline-block
+  box-shadow: none
+  background-color: transparent
+  background: none
+  cursor: pointer
+
+input
+  &[type="submit"]
+    display: inline-block
+    box-shadow: none
+    cursor: pointer
+
+  &:focus, &:active
+    outline: none
+
+button
+  &:focus, &:active
+    outline: none
+
+label
+  cursor: pointer
