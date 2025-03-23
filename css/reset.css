@@ -11,9 +11,13 @@
 
 /* Links */
 a {
+  color: #000000;
   text-decoration: none;
+  background-color: transparent;
+  cursor: pointer;
 }
 a:link, a:visited, a:hover {
+  color: #000000;
   text-decoration: none;
 }
 
@@ -72,8 +76,6 @@ button {
 input[type=submit] {
   display: inline-block;
   box-shadow: none;
-  background-color: transparent;
-  background: none;
   cursor: pointer;
 }
 input:focus, input:active {
@@ -94,34 +96,4 @@ label {
 
 legend {
   display: block;
-}
-
-*, *:before, *:after {
-  font-family: "Open Sans";
-}
-
-.header {
-  padding: 20px 35px;
-}
-.header__nav {
-  display: flex;
-  justify-content: end;
-  align-items: baseline;
-  gap: 37px;
-}
-.header__nav__item {
-  font-size: 15px;
-}
-.header__nav__login {
-  border-radius: 100px;
-  color: #FFFFFF;
-  font-size: 18px;
-  padding: 12px 30px;
-  background-color: #E93A7D;
-}
-
-.main__heading {
-  min-height: 862px;
-  background-image: url("../image/main_background.png");
-  background-size: cover;
 }
