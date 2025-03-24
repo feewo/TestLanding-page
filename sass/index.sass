@@ -11,6 +11,9 @@
 body.no-scroll
     overflow: hidden
 
+html, body 
+    scrollbar-gutter: stable
+
 .visually-hidden 
     position: absolute
     width: 1px
@@ -92,6 +95,7 @@ body.no-scroll
             background-color: $gray-background
             position: relative
             border-radius: 50px
+            display: block
             &:after,
             &:before 
                 width: 100%
